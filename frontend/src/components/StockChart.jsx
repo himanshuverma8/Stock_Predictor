@@ -31,7 +31,7 @@ const StockChart = () => {
   const fetchPrediction = async () => {
     setLoading(true);
     try {
-      const response = await axios.post("http://127.0.0.1:8000/predict", { ticker });
+      const response = await axios.post("https://stock-predictor-wf3z.onrender.com/predict", { ticker });
       const { dates, prices } = response.data;
       const formattedData = dates.map((date, index) => ({
         date,
